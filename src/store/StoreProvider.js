@@ -1,15 +1,14 @@
 import { createContext, useContext } from "react";
-import storeReducer, { initialStore } from "./storeReducer";
 import { useReducer } from "reinspect";
 
 const StoreContext = createContext(); // Provider & Consumer
 
-const StoreProvider = ({ children }) => {
+const StoreProvider = ({ reducer, initialState = {}, children }) => {
   const [store, dispatch] = useReducer(
-    storeReducer,
-    initialStore,
+    reducer,
+    initialState,
     (state) => state,
-    "reducerID"
+    "store"
   );
   return (
     <StoreContext.Provider value={[store, dispatch]}>

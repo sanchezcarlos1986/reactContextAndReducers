@@ -1,7 +1,4 @@
-const initialState = {
-  random: { value: 0 },
-  counter: 0,
-};
+const initialState = {};
 
 const combineReducers = (reducers) => {
   return (state, action) => {

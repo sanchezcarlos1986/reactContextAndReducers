@@ -1,5 +1,5 @@
 import { useStore, useDispatch } from "../store/StoreProvider";
-import { types } from "../store/storeReducer";
+import { types } from "../types";
 import { useState } from "reinspect";
 
 function MyComponent() {
